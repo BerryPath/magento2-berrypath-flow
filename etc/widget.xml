@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="berrypath_flow_widget" class="BerryPath\Flow\Block\Widget\Flow">
+        <label translate="true">BerryPath Flow</label>
+        <description translate="true">Embed a BerryPath advice flow.</description>
+        <parameters>
+            <parameter name="public_token" xsi:type="text" visible="true" required="true" sort_order="10">
+                <label translate="true">Flow public token</label>
+            </parameter>
+            <parameter name="display_type" xsi:type="select" visible="true" required="true" sort_order="20" source_model="BerryPath\Flow\Model\Config\Source\DisplayType">
+                <label translate="true">Display type</label>
+            </parameter>
+            <parameter name="button_label" xsi:type="text" visible="true" required="false" sort_order="30">
+                <label translate="true">Button label</label>
+                <description translate="true">Only used for popup and sidebar display types.</description>
+            </parameter>
+            <parameter name="locale" xsi:type="text" visible="true" required="false" sort_order="40">
+                <label translate="true">Locale</label>
+                <description translate="true">Leave empty to use the Magento store locale.</description>
+            </parameter>
+            <parameter name="market_code" xsi:type="text" visible="true" required="false" sort_order="50">
+                <label translate="true">Market code</label>
+            </parameter>
+            <parameter name="product_id" xsi:type="text" visible="true" required="false" sort_order="60">
+                <label translate="true">Product ID</label>
+                <description translate="true">Optional product ID to pass to the Flow widget.</description>
+            </parameter>
+            <parameter name="css_class" xsi:type="text" visible="true" required="false" sort_order="70">
+                <label translate="true">CSS class</label>
+                <description translate="true">Optional extra CSS class for the wrapper or button.</description>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

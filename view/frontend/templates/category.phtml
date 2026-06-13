@@ -1,0 +1,37 @@
+<?php
+/**
+ * @var \BerryPath\Flow\Block\Embed $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+<?php if ($block->canRender()): ?>
+    <?php
+    $blockClass = $block->getBlockCssClass();
+    $attributes = $block->getFlowAttributes();
+    $bannerTitle = $block->getBannerTitle();
+    $bannerDescription = $block->getBannerDescription();
+    ?>
+    <div class="<?= $escaper->escapeHtmlAttr($blockClass) ?>">
+    <?php if ($block->isButtonMode()): ?>
+        <div class="berrypath-flow-widget__banner">
+            <div class="berrypath-flow-widget__content">
+                <h2 class="berrypath-flow-widget__title"><?= $escaper->escapeHtml($bannerTitle) ?></h2>
+                <?php if ($bannerDescription !== ''): ?>
+                    <p class="berrypath-flow-widget__description"><?= nl2br($escaper->escapeHtml($bannerDescription)) ?></p>
+                <?php endif; ?>
+                <button type="button" class="<?= $escaper->escapeHtmlAttr($block->getElementCssClass('button')) ?>"
+                    <?php foreach ($attributes as $name => $value): ?>
+                        <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtmlAttr($value) ?>"
+                    <?php endforeach; ?>
+                ><?= $escaper->escapeHtml($block->getButtonLabel()) ?></button>
+            </div>
+        </div>
+    <?php else: ?>
+        <div class="<?= $escaper->escapeHtmlAttr($block->getElementCssClass('mount')) ?>"
+            <?php foreach ($attributes as $name => $value): ?>
+                <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtmlAttr($value) ?>"
+            <?php endforeach; ?>
+        ></div>
+    <?php endif; ?>
+    </div>
+<?php endif; ?>

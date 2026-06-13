@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="berrypath_widget" sortOrder="11">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">BerryPath Flow</label>
+        </settings>
+        <field name="berrypath_flow_public_token" sortOrder="10" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">category</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Flow UUID</label>
+                <notice translate="true">Paste the public token, share URL or embed URL from BerryPath.</notice>
+            </settings>
+        </field>
+        <field name="berrypath_flow_display_type" sortOrder="20" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">category</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Display type</label>
+            </settings>
+        </field>
+        <field name="berrypath_flow_banner_title" sortOrder="30" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">category</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Banner title</label>
+                <notice translate="true">Shown above the category Flow widget button.</notice>
+            </settings>
+        </field>
+        <field name="berrypath_flow_banner_description" sortOrder="40" formElement="textarea">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">category</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Banner description</label>
+                <notice translate="true">Shown above the category Flow widget button.</notice>
+            </settings>
+        </field>
+        <field name="berrypath_flow_button_label" sortOrder="50" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">category</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Button label</label>
+                <notice translate="true">Used for popup and sidebar display types.</notice>
+            </settings>
+        </field>
+    </fieldset>
+</form>

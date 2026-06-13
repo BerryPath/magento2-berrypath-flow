@@ -1,0 +1,27 @@
+<?php
+/**
+ * @var \BerryPath\Flow\Block\Widget\Flow $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+<?php if ($block->canRender()): ?>
+    <?php
+    $blockClass = $block->getBlockCssClass();
+    $attributes = $block->getFlowAttributes();
+    ?>
+    <div class="<?= $escaper->escapeHtmlAttr($blockClass) ?>">
+    <?php if ($block->isButtonMode()): ?>
+        <button type="button" class="<?= $escaper->escapeHtmlAttr($block->getElementCssClass('button')) ?>"
+            <?php foreach ($attributes as $name => $value): ?>
+                <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtmlAttr($value) ?>"
+            <?php endforeach; ?>
+        ><?= $escaper->escapeHtml($block->getButtonLabel()) ?></button>
+    <?php else: ?>
+        <div class="<?= $escaper->escapeHtmlAttr($block->getElementCssClass('mount')) ?>"
+            <?php foreach ($attributes as $name => $value): ?>
+                <?= $escaper->escapeHtmlAttr($name) ?>="<?= $escaper->escapeHtmlAttr($value) ?>"
+            <?php endforeach; ?>
+        ></div>
+    <?php endif; ?>
+    </div>
+<?php endif; ?>

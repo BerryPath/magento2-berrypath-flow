@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <berrypath_flow>
+            <general>
+                <market_code/>
+            </general>
+            <category>
+                <enabled>1</enabled>
+            </category>
+            <product>
+                <enabled>1</enabled>
+                <product_identifier>entity_id</product_identifier>
+            </product>
+        </berrypath_flow>
+    </default>
+</config>

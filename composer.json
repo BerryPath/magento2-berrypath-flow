@@ -1,0 +1,14 @@
+{
+    "name": "berrypath/magento2-berrypath-flow",
+    "description": "BerryPath Flow widget integration for Magento 2.",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "BerryPath\\Flow\\": ""
+        }
+    }
+}

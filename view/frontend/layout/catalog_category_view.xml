@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="BerryPath\Flow\Block\Embed"
+                   name="berrypath.flow.category"
+                   template="BerryPath_Flow::category.phtml"
+                   before="category.products">
+                <arguments>
+                    <argument name="flow_context" xsi:type="string">category</argument>
+                    <argument name="automatic_placement" xsi:type="boolean">true</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

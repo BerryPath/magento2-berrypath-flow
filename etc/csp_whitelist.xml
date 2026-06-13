@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp_whitelist xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Csp:etc/csp_whitelist.xsd">
+    <policies>
+        <policy id="script-src">
+            <values>
+                <value id="berrypath_local_app_script" type="host">https://app.berrypath.development:8443</value>
+                <value id="berrypath_live_script" type="host">https://www.berrypath.eu</value>
+                <value id="berrypath_live_root_script" type="host">https://berrypath.eu</value>
+            </values>
+        </policy>
+        <policy id="connect-src">
+            <values>
+                <value id="berrypath_local_app_connect" type="host">https://app.berrypath.development:8443</value>
+                <value id="berrypath_live_connect" type="host">https://www.berrypath.eu</value>
+                <value id="berrypath_live_root_connect" type="host">https://berrypath.eu</value>
+            </values>
+        </policy>
+        <policy id="img-src">
+            <values>
+                <value id="berrypath_local_app_image" type="host">https://app.berrypath.development:8443</value>
+                <value id="berrypath_live_image" type="host">https://www.berrypath.eu</value>
+                <value id="berrypath_live_root_image" type="host">https://berrypath.eu</value>
+            </values>
+        </policy>
+        <policy id="media-src">
+            <values>
+                <value id="berrypath_local_app_media" type="host">https://app.berrypath.development:8443</value>
+                <value id="berrypath_live_media" type="host">https://www.berrypath.eu</value>
+                <value id="berrypath_live_root_media" type="host">https://berrypath.eu</value>
+            </values>
+        </policy>
+    </policies>
+</csp_whitelist>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="BerryPath\Flow\Block\Embed"
+                   name="berrypath.flow.product"
+                   template="BerryPath_Flow::product.phtml"
+                   after="product.info.price">
+                <arguments>
+                    <argument name="flow_context" xsi:type="string">product</argument>
+                    <argument name="automatic_placement" xsi:type="boolean">true</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

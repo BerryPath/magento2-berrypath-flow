@@ -1,0 +1,252 @@
+//
+// BerryPath Flow widget defaults.
+// Override these LESS variables in your theme to match the storefront.
+//
+@berrypath-flow-widget-primary: #1666c1;
+@berrypath-flow-widget-primary-hover: #0f4f9a;
+@berrypath-flow-widget-text: #1f2933;
+@berrypath-flow-widget-muted: #52616f;
+@berrypath-flow-widget-border: #d9e2ec;
+@berrypath-flow-widget-surface: #ffffff;
+@berrypath-flow-widget-inverse-text: #ffffff;
+@berrypath-flow-widget-transparent-shadow: none;
+
+@berrypath-flow-widget-box-sizing: border-box;
+@berrypath-flow-widget-width: 100%;
+@berrypath-flow-widget-font-size: 14px;
+@berrypath-flow-widget-font-weight: 700;
+@berrypath-flow-widget-category-margin: 0 0 22px;
+@berrypath-flow-widget-product-margin: 8px 0 0;
+
+@berrypath-flow-widget-banner-surface: #f5f9fc;
+@berrypath-flow-widget-banner-border: @berrypath-flow-widget-border;
+@berrypath-flow-widget-banner-border-width: 1px;
+@berrypath-flow-widget-banner-border-style: solid;
+@berrypath-flow-widget-banner-padding-y: 18px;
+@berrypath-flow-widget-banner-padding-x: 20px;
+@berrypath-flow-widget-banner-width: @berrypath-flow-widget-width;
+
+@berrypath-flow-widget-content-flex: 1 1 auto;
+@berrypath-flow-widget-content-min-width: 0;
+
+@berrypath-flow-widget-radius: 6px;
+@berrypath-flow-widget-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+
+@berrypath-flow-widget-title-color: @berrypath-flow-widget-text;
+@berrypath-flow-widget-title-font-size: 20px;
+@berrypath-flow-widget-title-font-weight: 700;
+@berrypath-flow-widget-title-line-height: 1.25;
+@berrypath-flow-widget-title-margin: 0 0 6px;
+
+@berrypath-flow-widget-description-color: @berrypath-flow-widget-muted;
+@berrypath-flow-widget-description-font-size: 15px;
+@berrypath-flow-widget-description-font-weight: 400;
+@berrypath-flow-widget-description-line-height: 1.45;
+@berrypath-flow-widget-description-margin: 0 0 14px;
+@berrypath-flow-widget-description-max-width: 760px;
+
+@berrypath-flow-widget-button-display: inline-flex;
+@berrypath-flow-widget-button-align-items: center;
+@berrypath-flow-widget-button-justify-content: center;
+@berrypath-flow-widget-button-background: @berrypath-flow-widget-primary;
+@berrypath-flow-widget-button-background-hover: @berrypath-flow-widget-primary-hover;
+@berrypath-flow-widget-button-border-color: @berrypath-flow-widget-primary;
+@berrypath-flow-widget-button-border-color-hover: @berrypath-flow-widget-primary-hover;
+@berrypath-flow-widget-button-border-width: 1px;
+@berrypath-flow-widget-button-border-style: solid;
+@berrypath-flow-widget-button-color: @berrypath-flow-widget-inverse-text;
+@berrypath-flow-widget-button-color-hover: @berrypath-flow-widget-inverse-text;
+@berrypath-flow-widget-button-cursor: pointer;
+@berrypath-flow-widget-button-gap: 8px;
+@berrypath-flow-widget-button-height: 44px;
+@berrypath-flow-widget-button-line-height: 1.2;
+@berrypath-flow-widget-button-padding-y: 0;
+@berrypath-flow-widget-button-padding-x: 18px;
+@berrypath-flow-widget-button-text-align: center;
+@berrypath-flow-widget-button-text-decoration: none;
+@berrypath-flow-widget-button-text-decoration-hover: none;
+@berrypath-flow-widget-button-transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+@berrypath-flow-widget-button-white-space: normal;
+@berrypath-flow-widget-button-max-width: @berrypath-flow-widget-width;
+@berrypath-flow-widget-button-active-shadow: @berrypath-flow-widget-transparent-shadow;
+@berrypath-flow-widget-button-focus-outline-width: 2px;
+@berrypath-flow-widget-button-focus-outline-style: solid;
+@berrypath-flow-widget-button-focus-outline-color: fade(@berrypath-flow-widget-primary, 35%);
+@berrypath-flow-widget-button-focus-outline-offset: 2px;
+@berrypath-flow-widget-category-button-min-width: 220px;
+@berrypath-flow-widget-category-button-mobile-min-width: 0;
+@berrypath-flow-widget-category-button-mobile-width: auto;
+@berrypath-flow-widget-product-button-background: @berrypath-flow-widget-surface;
+@berrypath-flow-widget-product-button-background-hover: @berrypath-flow-widget-primary;
+@berrypath-flow-widget-product-button-border-color: @berrypath-flow-widget-primary;
+@berrypath-flow-widget-product-button-border-color-hover: @berrypath-flow-widget-primary;
+@berrypath-flow-widget-product-button-color: @berrypath-flow-widget-primary;
+@berrypath-flow-widget-product-button-color-hover: @berrypath-flow-widget-inverse-text;
+@berrypath-flow-widget-product-button-shadow: @berrypath-flow-widget-transparent-shadow;
+@berrypath-flow-widget-product-button-width: @berrypath-flow-widget-width;
+@berrypath-flow-widget-product-button-desktop-width: auto;
+@berrypath-flow-widget-product-button-max-width: 300px;
+
+@berrypath-flow-widget-mount-surface: @berrypath-flow-widget-surface;
+@berrypath-flow-widget-mount-border: @berrypath-flow-widget-border;
+@berrypath-flow-widget-mount-border-width: 1px;
+@berrypath-flow-widget-mount-border-style: solid;
+@berrypath-flow-widget-mount-radius: @berrypath-flow-widget-radius;
+@berrypath-flow-widget-mount-shadow: @berrypath-flow-widget-shadow;
+@berrypath-flow-widget-mount-display: block;
+@berrypath-flow-widget-inline-min-height: 220px;
+@berrypath-flow-widget-mount-overflow: hidden;
+@berrypath-flow-widget-mount-padding: 16px;
+@berrypath-flow-widget-mount-width: @berrypath-flow-widget-width;
+
+@berrypath-flow-widget-desktop-min-width: 768px;
+@berrypath-flow-widget-mobile-max-width: 767px;
+@berrypath-flow-widget-mobile-banner-padding: 16px;
+@berrypath-flow-widget-mobile-title-font-size: 18px;
+
+.berrypath-flow-widget {
+    box-sizing: @berrypath-flow-widget-box-sizing;
+    color: @berrypath-flow-widget-text;
+    font-size: @berrypath-flow-widget-font-size;
+    font-weight: @berrypath-flow-widget-font-weight;
+
+    &--category {
+        margin: @berrypath-flow-widget-category-margin;
+    }
+
+    &--product {
+        margin: @berrypath-flow-widget-product-margin;
+    }
+
+    &__banner {
+        background: @berrypath-flow-widget-banner-surface;
+        border: @berrypath-flow-widget-banner-border-width @berrypath-flow-widget-banner-border-style @berrypath-flow-widget-banner-border;
+        border-radius: @berrypath-flow-widget-radius;
+        box-sizing: @berrypath-flow-widget-box-sizing;
+        padding: @berrypath-flow-widget-banner-padding-y @berrypath-flow-widget-banner-padding-x;
+        width: @berrypath-flow-widget-banner-width;
+    }
+
+    &__content {
+        flex: @berrypath-flow-widget-content-flex;
+        min-width: @berrypath-flow-widget-content-min-width;
+    }
+
+    &__title {
+        color: @berrypath-flow-widget-title-color;
+        font-size: @berrypath-flow-widget-title-font-size;
+        font-weight: @berrypath-flow-widget-title-font-weight;
+        line-height: @berrypath-flow-widget-title-line-height;
+        margin: @berrypath-flow-widget-title-margin;
+    }
+
+    &__description {
+        color: @berrypath-flow-widget-description-color;
+        font-size: @berrypath-flow-widget-description-font-size;
+        font-weight: @berrypath-flow-widget-description-font-weight;
+        line-height: @berrypath-flow-widget-description-line-height;
+        margin: @berrypath-flow-widget-description-margin;
+        max-width: @berrypath-flow-widget-description-max-width;
+    }
+
+    &__button {
+        align-items: @berrypath-flow-widget-button-align-items;
+        background: @berrypath-flow-widget-button-background;
+        border: @berrypath-flow-widget-button-border-width @berrypath-flow-widget-button-border-style @berrypath-flow-widget-button-border-color;
+        border-radius: @berrypath-flow-widget-radius;
+        box-sizing: @berrypath-flow-widget-box-sizing;
+        box-shadow: @berrypath-flow-widget-shadow;
+        color: @berrypath-flow-widget-button-color;
+        cursor: @berrypath-flow-widget-button-cursor;
+        display: @berrypath-flow-widget-button-display;
+        gap: @berrypath-flow-widget-button-gap;
+        justify-content: @berrypath-flow-widget-button-justify-content;
+        line-height: @berrypath-flow-widget-button-line-height;
+        max-width: @berrypath-flow-widget-button-max-width;
+        min-height: @berrypath-flow-widget-button-height;
+        padding: @berrypath-flow-widget-button-padding-y @berrypath-flow-widget-button-padding-x;
+        text-align: @berrypath-flow-widget-button-text-align;
+        text-decoration: @berrypath-flow-widget-button-text-decoration;
+        transition: @berrypath-flow-widget-button-transition;
+        white-space: @berrypath-flow-widget-button-white-space;
+
+        &:hover,
+        &:focus {
+            background: @berrypath-flow-widget-button-background-hover;
+            border-color: @berrypath-flow-widget-button-border-color-hover;
+            color: @berrypath-flow-widget-button-color-hover;
+            text-decoration: @berrypath-flow-widget-button-text-decoration-hover;
+        }
+
+        &:focus-visible {
+            outline: @berrypath-flow-widget-button-focus-outline-width @berrypath-flow-widget-button-focus-outline-style @berrypath-flow-widget-button-focus-outline-color;
+            outline-offset: @berrypath-flow-widget-button-focus-outline-offset;
+        }
+
+        &:active {
+            box-shadow: @berrypath-flow-widget-button-active-shadow;
+        }
+
+        &--category {
+            min-width: @berrypath-flow-widget-category-button-min-width;
+        }
+
+        &--product {
+            background: @berrypath-flow-widget-product-button-background;
+            border-color: @berrypath-flow-widget-product-button-border-color;
+            box-shadow: @berrypath-flow-widget-product-button-shadow;
+            color: @berrypath-flow-widget-product-button-color;
+            width: @berrypath-flow-widget-product-button-width;
+
+            &:hover,
+            &:focus {
+                background: @berrypath-flow-widget-product-button-background-hover;
+                border-color: @berrypath-flow-widget-product-button-border-color-hover;
+                color: @berrypath-flow-widget-product-button-color-hover;
+            }
+        }
+    }
+
+    &__mount {
+        background: @berrypath-flow-widget-mount-surface;
+        border: @berrypath-flow-widget-mount-border-width @berrypath-flow-widget-mount-border-style @berrypath-flow-widget-mount-border;
+        border-radius: @berrypath-flow-widget-mount-radius;
+        box-sizing: @berrypath-flow-widget-box-sizing;
+        box-shadow: @berrypath-flow-widget-mount-shadow;
+        display: @berrypath-flow-widget-mount-display;
+        min-height: @berrypath-flow-widget-inline-min-height;
+        overflow: @berrypath-flow-widget-mount-overflow;
+        padding: @berrypath-flow-widget-mount-padding;
+        width: @berrypath-flow-widget-mount-width;
+    }
+}
+
+@media (min-width: @berrypath-flow-widget-desktop-min-width) {
+    .berrypath-flow-widget {
+        &__button {
+            &--product {
+                max-width: @berrypath-flow-widget-product-button-max-width;
+                width: @berrypath-flow-widget-product-button-desktop-width;
+            }
+        }
+    }
+}
+
+@media (max-width: @berrypath-flow-widget-mobile-max-width) {
+    .berrypath-flow-widget {
+        &__banner {
+            padding: @berrypath-flow-widget-mobile-banner-padding;
+        }
+
+        &__title {
+            font-size: @berrypath-flow-widget-mobile-title-font-size;
+        }
+
+        &__button {
+            &--category {
+                min-width: @berrypath-flow-widget-category-button-mobile-min-width;
+                width: @berrypath-flow-widget-category-button-mobile-width;
+            }
+        }
+    }
+}
