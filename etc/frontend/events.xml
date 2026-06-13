@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="cms_page_render">
+        <observer name="berrypath_flow_add_cms_widget_loader" instance="BerryPath\Flow\Observer\AddCmsWidgetLoader"/>
+    </event>
+    <event name="layout_generate_blocks_after">
+        <observer name="berrypath_flow_add_cms_widget_loader_after_blocks" instance="BerryPath\Flow\Observer\AddCmsWidgetLoader"/>
+    </event>
+</config>

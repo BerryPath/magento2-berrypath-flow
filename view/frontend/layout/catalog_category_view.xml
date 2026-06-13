@@ -9,7 +9,6 @@
                    before="category.products">
                 <arguments>
                     <argument name="flow_context" xsi:type="string">category</argument>
-                    <argument name="automatic_placement" xsi:type="boolean">true</argument>
                 </arguments>
             </block>
         </referenceContainer>

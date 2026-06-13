@@ -11,22 +11,28 @@
             <parameter name="display_type" xsi:type="select" visible="true" required="true" sort_order="20" source_model="BerryPath\Flow\Model\Config\Source\DisplayType">
                 <label translate="true">Display type</label>
             </parameter>
-            <parameter name="button_label" xsi:type="text" visible="true" required="false" sort_order="30">
+            <parameter name="banner_title" xsi:type="text" visible="true" required="false" sort_order="30">
+                <label translate="true">Banner title</label>
+            </parameter>
+            <parameter name="banner_description" xsi:type="text" visible="true" required="false" sort_order="40">
+                <label translate="true">Banner description</label>
+            </parameter>
+            <parameter name="button_label" xsi:type="text" visible="true" required="false" sort_order="50">
                 <label translate="true">Button label</label>
                 <description translate="true">Only used for popup and sidebar display types.</description>
             </parameter>
-            <parameter name="locale" xsi:type="text" visible="true" required="false" sort_order="40">
+            <parameter name="locale" xsi:type="text" visible="true" required="false" sort_order="60">
                 <label translate="true">Locale</label>
                 <description translate="true">Leave empty to use the Magento store locale.</description>
             </parameter>
-            <parameter name="market_code" xsi:type="text" visible="true" required="false" sort_order="50">
+            <parameter name="market_code" xsi:type="text" visible="true" required="false" sort_order="70">
                 <label translate="true">Market code</label>
             </parameter>
-            <parameter name="product_id" xsi:type="text" visible="true" required="false" sort_order="60">
+            <parameter name="product_id" xsi:type="text" visible="true" required="false" sort_order="80">
                 <label translate="true">Product ID</label>
                 <description translate="true">Optional product ID to pass to the Flow widget.</description>
             </parameter>
-            <parameter name="css_class" xsi:type="text" visible="true" required="false" sort_order="70">
+            <parameter name="css_class" xsi:type="text" visible="true" required="false" sort_order="90">
                 <label translate="true">CSS class</label>
                 <description translate="true">Optional extra CSS class for the wrapper or button.</description>
             </parameter>

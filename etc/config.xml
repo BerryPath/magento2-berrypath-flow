@@ -4,6 +4,7 @@
     <default>
         <berrypath_flow>
             <general>
+                <enabled>1</enabled>
                 <market_code/>
             </general>
             <category>

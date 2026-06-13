@@ -21,10 +21,12 @@ class Embed extends Template
 
     private const XML_PATH_CATEGORY_ENABLED = 'berrypath_flow/category/enabled';
     private const XML_PATH_PRODUCT_ENABLED = 'berrypath_flow/product/enabled';
+    private const XML_PATH_GENERAL_ENABLED = 'berrypath_flow/general/enabled';
     private const XML_PATH_MARKET_CODE = 'berrypath_flow/general/market_code';
     private const XML_PATH_PRODUCT_IDENTIFIER = 'berrypath_flow/product/product_identifier';
 
-    private const EMBED_ORIGIN = 'https://app.berrypath.development:8443';
+    public const EMBED_ORIGIN = 'https://app.berrypath.development:8443';
+    public const LOADER_SCRIPT_URL = self::EMBED_ORIGIN . '/embed/berrypath.js';
 
     protected $_template = 'BerryPath_Flow::widget.phtml';
 
@@ -40,7 +42,11 @@ class Embed extends Template
 
     public function canRender(): bool
     {
-        if ($this->isAutomaticPlacement() && !$this->isGlobalPlacementEnabled()) {
+        if (!$this->scopeConfig->isSetFlag(self::XML_PATH_GENERAL_ENABLED, ScopeInterface::SCOPE_STORE)) {
+            return false;
+        }
+
+        if (!$this->isGlobalPlacementEnabled()) {
             return false;
         }
 
@@ -98,7 +104,7 @@ class Embed extends Template
 
     public function getLoaderScriptUrl(): string
     {
-        return self::EMBED_ORIGIN . '/embed/berrypath.js';
+        return self::LOADER_SCRIPT_URL;
     }
 
     public function getPublicToken(): string
@@ -124,7 +130,7 @@ class Embed extends Template
     public function getDisplayType(): string
     {
         $displayType = $this->stringData('display_type');
-        if ($displayType === '' && $this->isAutomaticPlacement()) {
+        if ($displayType === '' && $this->hasEntityContext()) {
             $displayType = $this->entityAttributeValue(self::ATTR_DISPLAY_TYPE);
         }
 
@@ -134,17 +140,17 @@ class Embed extends Template
     public function getButtonLabel(): string
     {
         $label = $this->stringData('button_label');
-        if ($label === '' && $this->isAutomaticPlacement()) {
+        if ($label === '' && $this->hasEntityContext()) {
             $label = $this->entityAttributeValue(self::ATTR_BUTTON_LABEL);
         }
 
-        return $label !== '' ? $label : (string)__('Open advice flow');
+        return $label !== '' ? $label : (string)__('Start the choice helper');
     }
 
     public function getBannerTitle(): string
     {
         $title = $this->stringData('banner_title');
-        if ($title === '' && $this->isAutomaticPlacement()) {
+        if ($title === '' && $this->hasEntityContext()) {
             $title = $this->entityAttributeValue(self::ATTR_BANNER_TITLE);
         }
 
@@ -154,7 +160,7 @@ class Embed extends Template
     public function getBannerDescription(): string
     {
         $description = $this->stringData('banner_description');
-        if ($description === '' && $this->isAutomaticPlacement()) {
+        if ($description === '' && $this->hasEntityContext()) {
             $description = $this->entityAttributeValue(self::ATTR_BANNER_DESCRIPTION);
         }
 
@@ -201,11 +207,6 @@ class Embed extends Template
         ]);
     }
 
-    private function isAutomaticPlacement(): bool
-    {
-        return (bool)$this->getData('automatic_placement');
-    }
-
     private function getFlowContext(): string
     {
         $context = $this->stringData('flow_context');
@@ -214,6 +215,11 @@ class Embed extends Template
         }
 
         return in_array($context, ['category', 'product', 'generic'], true) ? $context : 'generic';
+    }
+
+    private function hasEntityContext(): bool
+    {
+        return in_array($this->getFlowContext(), ['category', 'product'], true);
     }
 
     private function isGlobalPlacementEnabled(): bool

@@ -9,7 +9,6 @@
                    after="product.info.price">
                 <arguments>
                     <argument name="flow_context" xsi:type="string">product</argument>
-                    <argument name="automatic_placement" xsi:type="boolean">true</argument>
                 </arguments>
             </block>
         </referenceContainer>
