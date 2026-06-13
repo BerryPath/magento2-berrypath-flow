@@ -25,7 +25,7 @@ class Embed extends Template
     private const XML_PATH_MARKET_CODE = 'berrypath_flow/general/market_code';
     private const XML_PATH_PRODUCT_IDENTIFIER = 'berrypath_flow/product/product_identifier';
 
-    public const EMBED_ORIGIN = 'https://app.berrypath.development:8443';
+    public const EMBED_ORIGIN = 'https://www.berrypath.eu';
     public const LOADER_SCRIPT_URL = self::EMBED_ORIGIN . '/embed/berrypath.js';
 
     protected $_template = 'BerryPath_Flow::widget.phtml';
