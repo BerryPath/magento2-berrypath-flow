@@ -14,6 +14,9 @@
                 <enabled>1</enabled>
                 <product_identifier>entity_id</product_identifier>
             </product>
+            <success_pixel>
+                <enabled>1</enabled>
+            </success_pixel>
         </berrypath_flow>
     </default>
 </config>

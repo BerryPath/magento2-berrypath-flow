@@ -1,0 +1,10 @@
+<?php
+declare(strict_types=1);
+
+/** @var \BerryPath\Flow\Block\SuccessPixel $block */
+?>
+<?php if ($block->canRender()): ?>
+    <script>
+        window.BerryPath.conversion(<?= /* @noEscape */ $block->getOrderPayloadJson() ?>);
+    </script>
+<?php endif; ?>

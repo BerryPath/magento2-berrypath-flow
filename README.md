@@ -29,7 +29,7 @@ Global settings are in:
 Stores > Configuration > BerryPath > Flow
 ```
 
-Use this for global enable/disable, market code and product ID source.
+Use this for global enable/disable, market code, product ID source and the success pixel.
 
 Enable the widget per page by entering a Flow UUID:
 
@@ -38,6 +38,8 @@ Enable the widget per page by entering a Flow UUID:
 - CMS/widget usage: Magento widget `BerryPath Flow`
 
 If no Flow UUID is set on the category, product or widget, nothing is rendered.
+
+The success pixel is enabled by default. On the Magento checkout success page it loads the main `berrypath.js` file and passes the order total plus product identifiers through `window.BerryPath.conversion(...)` for assisted conversion tracking.
 
 ## Hyva
 
