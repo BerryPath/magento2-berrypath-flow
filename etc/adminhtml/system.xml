@@ -2,13 +2,18 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="berrypath" translate="label" sortOrder="900">
+        <tab id="berrypath" translate="label" sortOrder="900" class="berrypath-tab">
             <label>BerryPath</label>
         </tab>
         <section id="berrypath_flow" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Flow</label>
             <tab>berrypath</tab>
             <resource>BerryPath_Flow::config</resource>
+
+            <group id="branding" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Branding</label>
+                <frontend_model>BerryPath\Flow\Block\Adminhtml\Render\Header</frontend_model>
+            </group>
 
             <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>

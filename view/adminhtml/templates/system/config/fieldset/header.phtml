@@ -1,0 +1,41 @@
+<?php
+
+/** @var \BerryPath\Flow\Block\Adminhtml\Render\Header $block */
+?>
+<div class="bp-block-berrypath">
+    <div class="bp-block-berrypath__brand">
+        <img
+            class="bp-block-berrypath__logo"
+            src="<?= $block->escapeUrl($block->getViewFileUrl('BerryPath_Flow::images/logo.svg')); ?>"
+            alt="<?= $block->escapeHtmlAttr(__('BerryPath')); ?>"
+        />
+        <div>
+            <strong><?= $block->escapeHtml(__('BerryPath Flow')); ?></strong>
+            <span><?= $block->escapeHtml(__('Personalized shopping flows for Magento.')); ?></span>
+        </div>
+    </div>
+    <div class="bp-block-berrypath__links">
+        <a href="https://www.berrypath.eu/" target="_blank" rel="noopener noreferrer">
+            <img
+                class="bp-block-berrypath__link-icon"
+                src="<?= $block->escapeUrl($block->getViewFileUrl('BerryPath_Flow::images/icon-website.svg')); ?>"
+                width="16"
+                height="16"
+                alt=""
+                aria-hidden="true"
+            />
+            <span><?= $block->escapeHtml(__('Visit berrypath.eu')); ?></span>
+        </a>
+        <a href="https://www.berrypath.eu/contact" target="_blank" rel="noopener noreferrer">
+            <img
+                class="bp-block-berrypath__link-icon"
+                src="<?= $block->escapeUrl($block->getViewFileUrl('BerryPath_Flow::images/icon-contact.svg')); ?>"
+                width="16"
+                height="16"
+                alt=""
+                aria-hidden="true"
+            />
+            <span><?= $block->escapeHtml(__('Contact BerryPath')); ?></span>
+        </a>
+    </div>
+</div>
