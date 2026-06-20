@@ -15,7 +15,7 @@
     <?php if ($block->isButtonMode()): ?>
         <div class="berrypath-flow-widget__banner">
             <div class="berrypath-flow-widget__content">
-                <h2 class="berrypath-flow-widget__title"><?= $escaper->escapeHtml($bannerTitle) ?></h2>
+                <div class="berrypath-flow-widget__title"><?= $escaper->escapeHtml($bannerTitle) ?></div>
                 <?php if ($bannerDescription !== ''): ?>
                     <p class="berrypath-flow-widget__description"><?= nl2br($escaper->escapeHtml($bannerDescription)) ?></p>
                 <?php endif; ?>
