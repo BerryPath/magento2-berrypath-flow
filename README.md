@@ -29,7 +29,9 @@ Global settings are in:
 Stores > Configuration > BerryPath > Flow
 ```
 
-Use this for global enable/disable, market code, product ID source and the success pixel.
+Use this for global enable/disable, locale code, market code, product ID source and the success pixel.
+
+The locale code is passed to the BerryPath embed as `data-berrypath-locale`. Leave it empty to derive the primary language from the Magento store locale, for example `de_DE` becomes `de` and `fr_FR` becomes `fr`.
 
 Enable the widget per page by entering a Flow UUID:
 

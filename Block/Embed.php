@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace BerryPath\Flow\Block;
 
+use BerryPath\Flow\Model\Config\Source\LocaleCode;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Locale\ResolverInterface;
@@ -22,6 +23,7 @@ class Embed extends Template
     private const XML_PATH_CATEGORY_ENABLED = 'berrypath_flow/category/enabled';
     private const XML_PATH_PRODUCT_ENABLED = 'berrypath_flow/product/enabled';
     private const XML_PATH_GENERAL_ENABLED = 'berrypath_flow/general/enabled';
+    private const XML_PATH_LOCALE_CODE = 'berrypath_flow/general/locale_code';
     private const XML_PATH_MARKET_CODE = 'berrypath_flow/general/market_code';
     private const XML_PATH_PRODUCT_IDENTIFIER = 'berrypath_flow/product/product_identifier';
 
@@ -268,12 +270,13 @@ class Embed extends Template
     {
         $locale = $this->stringData('locale');
         if ($locale === '') {
+            $locale = (string)$this->scopeConfig->getValue(self::XML_PATH_LOCALE_CODE, ScopeInterface::SCOPE_STORE);
+        }
+        if ($locale === '') {
             $locale = $this->localeResolver->getLocale();
         }
 
-        $locale = strtolower(str_replace('_', '-', trim($locale)));
-
-        return preg_match('/^[a-z]{2,3}(-[a-z0-9]{2,8}){0,3}$/', $locale) === 1 ? $locale : '';
+        return LocaleCode::normalizeLocaleCode($locale);
     }
 
     private function getMarketCode(): string

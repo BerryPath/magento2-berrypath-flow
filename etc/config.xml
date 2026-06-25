@@ -6,6 +6,7 @@
             <general>
                 <enabled>1</enabled>
                 <market_code/>
+                <locale_code/>
             </general>
             <category>
                 <enabled>1</enabled>

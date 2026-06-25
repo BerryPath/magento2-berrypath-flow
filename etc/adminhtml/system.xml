@@ -26,6 +26,11 @@
                     <label>Market code</label>
                     <comment>Optional market code for multi-storefront product feeds.</comment>
                 </field>
+                <field id="locale_code" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Locale code</label>
+                    <comment>Choose the BerryPath Flow translation locale. Leave empty to use the Magento store locale.</comment>
+                    <source_model>BerryPath\Flow\Model\Config\Source\LocaleCode</source_model>
+                </field>
             </group>
 
             <group id="category" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
