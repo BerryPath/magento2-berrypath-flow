@@ -18,7 +18,7 @@
         </field>
         <field id="product_identifier" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Product ID source</label>
-            <comment>Use the same product ID as your BerryPath product feed.</comment>
+            <comment>Use the same product ID as your product feed.</comment>
             <source_model>BerryPath\Flow\Model\Config\Source\ProductIdentifier</source_model>
         </field>
     </group>

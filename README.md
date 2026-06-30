@@ -29,7 +29,7 @@ Global settings are in:
 Stores > Configuration > BerryPath > Flow
 ```
 
-Use this for global enable/disable, locale code, market code, product ID source, product feed and the success pixel.
+Use this for global enable/disable, locale code, market code, product ID source and the success pixel.
 
 The locale code is passed to the BerryPath embed as `data-berrypath-locale`. Leave it empty to derive the primary language from the Magento store locale, for example `de_DE` becomes `de` and `fr_FR` becomes `fr`.
 
@@ -45,25 +45,11 @@ The success pixel is enabled by default. On the Magento checkout success page it
 
 ## Product Feed
 
-The module can generate an XML product feed per Magento store view:
+Product feed generation is provided by the separate package:
 
-```text
-Stores > Configuration > BerryPath > Flow > Product feed
-```
+- Package: [`berrypath/magento2-berrypath-product-feed`](https://github.com/BerryPath/magento2-berrypath-product-feed)
 
-The admin configuration shows a preview URL and XML feed URL for every store view.
-
-Feed endpoint:
-
-```text
-/berrypath/feed/id/{store_id}
-```
-
-Optional parameters:
-
-- `pid`: fetch one product by the configured Product ID source.
-
-The feed uses the Magento store context, so store-scoped product values, product URLs, image URLs, currency, locale, market code and review summary data are generated per store view.
+It adds the `Stores > Configuration > BerryPath > Product Feed` section and generates the XML feed per store view.
 
 ## Hyva
 

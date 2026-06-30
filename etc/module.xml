@@ -6,7 +6,6 @@
             <module name="Magento_Catalog"/>
             <module name="Magento_Config"/>
             <module name="Magento_Csp"/>
-            <module name="Magento_Review"/>
             <module name="Magento_Widget"/>
         </sequence>
     </module>

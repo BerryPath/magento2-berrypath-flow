@@ -11,7 +11,6 @@
             <resource>BerryPath_Flow::config</resource>
             <include path="BerryPath_Flow::system/general.xml"/>
             <include path="BerryPath_Flow::system/placements.xml"/>
-            <include path="BerryPath_Flow::system/feed.xml"/>
             <include path="BerryPath_Flow::system/success_pixel.xml"/>
         </section>
     </system>
