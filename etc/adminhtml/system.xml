@@ -9,61 +9,10 @@
             <label>Flow</label>
             <tab>berrypath</tab>
             <resource>BerryPath_Flow::config</resource>
-
-            <group id="branding" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Branding</label>
-                <frontend_model>BerryPath\Flow\Block\Adminhtml\Render\Header</frontend_model>
-            </group>
-
-            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>General</label>
-                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable Flow widgets</label>
-                    <comment>Disable all BerryPath Flow widgets for this scope.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="market_code" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Market code</label>
-                    <comment>Optional market code for multi-storefront product feeds.</comment>
-                </field>
-                <field id="locale_code" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Locale code</label>
-                    <comment>Choose the BerryPath Flow translation locale. Leave empty to use the Magento store locale.</comment>
-                    <source_model>BerryPath\Flow\Model\Config\Source\LocaleCode</source_model>
-                </field>
-            </group>
-
-            <group id="category" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Category pages</label>
-                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable category placement</label>
-                    <comment>Category pages render when this is enabled and the category has a Flow UUID.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-            </group>
-
-            <group id="product" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Product pages</label>
-                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable product placement</label>
-                    <comment>Product pages render when this is enabled and the product has a Flow UUID.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-                <field id="product_identifier" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Product ID source</label>
-                    <comment>Use the same product ID as your BerryPath product feed.</comment>
-                    <source_model>BerryPath\Flow\Model\Config\Source\ProductIdentifier</source_model>
-                </field>
-            </group>
-
-            <group id="success_pixel" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Success pixel</label>
-                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Enable success pixel</label>
-                    <comment>Send BerryPath assisted conversion data on the Magento checkout success page.</comment>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                </field>
-            </group>
+            <include path="BerryPath_Flow::system/general.xml"/>
+            <include path="BerryPath_Flow::system/placements.xml"/>
+            <include path="BerryPath_Flow::system/feed.xml"/>
+            <include path="BerryPath_Flow::system/success_pixel.xml"/>
         </section>
     </system>
 </config>

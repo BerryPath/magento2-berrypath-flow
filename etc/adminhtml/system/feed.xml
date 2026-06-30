@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="feed" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Product feed</label>
+        <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Enable product feed</label>
+            <comment>Generate a BerryPath product feed for each Magento store view.</comment>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+        <field id="include_not_visible" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Include not visible products</label>
+            <comment>Enable this when BerryPath should use simple variant IDs that are not individually visible in the catalog.</comment>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+        <field id="extra_attributes" translate="label comment" type="multiselect" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Extra attributes</label>
+            <comment>Optional product attributes to add as extra fields on each product.</comment>
+            <source_model>BerryPath\Flow\Model\Config\Source\ProductAttribute</source_model>
+            <can_be_empty>1</can_be_empty>
+        </field>
+        <field id="links" translate="label" type="label" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="1">
+            <label>Feed URLs</label>
+            <frontend_model>BerryPath\Flow\Block\Adminhtml\Render\Feeds</frontend_model>
+        </field>
+    </group>
+</include>

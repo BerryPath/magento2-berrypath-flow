@@ -15,6 +15,11 @@
                 <enabled>1</enabled>
                 <product_identifier>entity_id</product_identifier>
             </product>
+            <feed>
+                <enabled>1</enabled>
+                <include_not_visible>0</include_not_visible>
+                <extra_attributes/>
+            </feed>
             <success_pixel>
                 <enabled>1</enabled>
             </success_pixel>

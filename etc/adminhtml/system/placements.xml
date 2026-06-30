@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+    <group id="category" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Category pages</label>
+        <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Enable category placement</label>
+            <comment>Category pages render when this is enabled and the category has a Flow UUID.</comment>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+    </group>
+    <group id="product" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+        <label>Product pages</label>
+        <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Enable product placement</label>
+            <comment>Product pages render when this is enabled and the product has a Flow UUID.</comment>
+            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+        <field id="product_identifier" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product ID source</label>
+            <comment>Use the same product ID as your BerryPath product feed.</comment>
+            <source_model>BerryPath\Flow\Model\Config\Source\ProductIdentifier</source_model>
+        </field>
+    </group>
+</include>
